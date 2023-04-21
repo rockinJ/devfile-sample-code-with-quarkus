@@ -23,7 +23,7 @@ USER root
 WORKDIR /build
 
 COPY pom.xml .
-COPY .m2 .m2
+COPY .m2 /root/.m2
 RUN mvn dependency:go-offline
 
 COPY src src
